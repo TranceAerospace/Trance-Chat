@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 	
@@ -107,10 +108,10 @@ class RegisterViewController: UIViewController {
 		
 		title = "Log In"
 		view.backgroundColor = .white
-//		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
-//															style: .done,
-//															target: self,
-//															action: #selector(didTapRegister))
+		//		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
+		//															style: .done,
+		//															target: self,
+		//															action: #selector(didTapRegister))
 		
 		registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
 		emailField.delegate = self
@@ -172,9 +173,9 @@ class RegisterViewController: UIViewController {
 									 height: 52)
 		
 		registerButton.frame = CGRect(x: 30,
-								   y: passwordField.bottom + 10,
-								   width: scrollView.width - 60,
-								   height: 52)
+									  y: passwordField.bottom + 10,
+									  width: scrollView.width - 60,
+									  height: 52)
 	}
 	
 	@objc private func registerButtonTapped() {
@@ -199,6 +200,15 @@ class RegisterViewController: UIViewController {
 		}
 		
 		// Firebase Log in
+		
+		FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+			guard let result = authResult, error == nil else {
+				print("Error creating user")
+				return
+			}
+			let user = result.user
+			print("Created user \(user)")
+		}
 	}
 	
 	func alertUserLoginError() {
@@ -208,11 +218,11 @@ class RegisterViewController: UIViewController {
 		present(alert, animated: true)
 	}
 	
-//	@objc private func didTapRegister() {
-//		let vc = RegisterViewController()
-//		vc.title = "Create Account"
-//		navigationController?.pushViewController(vc, animated: true)
-//	}
+	//	@objc private func didTapRegister() {
+	//		let vc = RegisterViewController()
+	//		vc.title = "Create Account"
+	//		navigationController?.pushViewController(vc, animated: true)
+	//	}
 	
 }
 
@@ -242,14 +252,14 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
 		actionSheet.addAction(UIAlertAction(title: "Take Photo",
 											style: .default,
 											handler: { [weak self] _ in
-			self?.presentCamera()
-		}))
+												self?.presentCamera()
+											}))
 		
 		actionSheet.addAction(UIAlertAction(title: "Choose Photo",
 											style: .default,
 											handler: { [weak self] _ in
-			self?.presentPhotoPicker()
-		}))
+												self?.presentPhotoPicker()
+											}))
 		present(actionSheet, animated: true)
 	}
 	
