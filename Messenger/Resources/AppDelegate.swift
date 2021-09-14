@@ -86,6 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 			return
 		}
 		
+		
 		let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
 		
 		FirebaseAuth.Auth.auth().signIn(with: credential) { authResult, error in
