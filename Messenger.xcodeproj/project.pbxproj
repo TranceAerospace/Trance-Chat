@@ -14,6 +14,7 @@
 		9F08EED226E6E627000EFF87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F08EED026E6E627000EFF87 /* Main.storyboard */; };
 		9F08EED426E6E628000EFF87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F08EED326E6E628000EFF87 /* Assets.xcassets */; };
 		9F08EED726E6E628000EFF87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F08EED526E6E628000EFF87 /* LaunchScreen.storyboard */; };
+		9F0D70A326F7671A00185BA3 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D70A226F7671A00185BA3 /* StorageManager.swift */; };
 		9F283B9726E6E9BC00792F28 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F283B9626E6E9BC00792F28 /* LoginViewController.swift */; };
 		9F283B9926E6E9C900792F28 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F283B9826E6E9C900792F28 /* RegisterViewController.swift */; };
 		9F283B9B26E6E9EF00792F28 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F283B9A26E6E9EF00792F28 /* PhotoViewerViewController.swift */; };
@@ -39,6 +40,7 @@
 		9F08EED326E6E628000EFF87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F08EED626E6E628000EFF87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F08EED826E6E628000EFF87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F0D70A226F7671A00185BA3 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		9F283B9626E6E9BC00792F28 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9F283B9826E6E9C900792F28 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9F283B9A26E6E9EF00792F28 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				9F08EECC26E6E627000EFF87 /* SceneDelegate.swift */,
 				9F283BA326E6F22500792F28 /* Extensions.swift */,
 				9F283BA726ECEED400792F28 /* DatabaseManager.swift */,
+				9F0D70A226F7671A00185BA3 /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				9F08EECD26E6E627000EFF87 /* SceneDelegate.swift in Sources */,
 				9F08864D26F4099C002C5D75 /* ChatViewController.swift in Sources */,
 				9F283B9B26E6E9EF00792F28 /* PhotoViewerViewController.swift in Sources */,
+				9F0D70A326F7671A00185BA3 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
